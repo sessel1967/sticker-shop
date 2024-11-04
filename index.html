@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Sticker Shop</title>
+</head>
+<body>
+    <header>
+        <h1>Willkommen im Sticker Shop</h1>
+        <nav>
+            <ul>
+                <li><a href="#produkte">Produkte</a></li>
+                <li><a href="#ueber-uns">Über uns</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+                <li><a href="#bewertungen">Kundenbewertungen</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="produkte">
+            <h2>Unsere einzigartigen Sticker</h2>
+            <div class="produkt">
+                <img src="bilder/dein_design_1.jpg" alt="Sticker Design 1">
+                <h3>Design 1: Coole Katze</h3>
+                <p>Ein süßes Katzendesign für alle Tierliebhaber!</p>
+                <p>Preis: 2,99 €</p>
+                <button onclick="inWarenkorb('Design 1: Coole Katze')">In den Warenkorb</button>
+            </div>
+            <div class="produkt">
+                <img src="bilder/dein_design_2.jpg" alt="Sticker Design 2">
+                <h3>Design 2: Abenteuerliche Berge</h3>
+                <p>Perfekt für Reisefans und Abenteuerlustige.</p>
+                <p>Preis: 3,49 €</p>
+                <button onclick="inWarenkorb('Design 2: Abenteuerliche Berge')">In den Warenkorb</button>
+            </div>
+        </section>
+        
+        <section id="ueber-uns">
+            <h2>Über uns</h2>
+            <p>Hier kannst du deine Geschichte erzählen.</p>
+        </section>
+        
+        <section id="kontakt">
+            <h2>Kontakt</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">E-Mail:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="nachricht">Nachricht:</label>
+                <textarea id="nachricht" name="nachricht" required></textarea>
+                
+                <button type="submit">Absenden</button>
+            </form>
+        </section>
+
+        <section id="bewertungen">
+            <h2>Kundenbewertungen</h2>
+            <div class="bewertung">
+                <p>"Tolle Qualität und wunderschöne Designs! Ich liebe meine neuen Sticker!" - Maria S.</p>
+            </div>
+            <div class="bewertung">
+                <p>"Schnelle Lieferung und sehr nette Kommunikation. Immer wieder gerne!" - Peter G.</p>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Sticker Shop. Alle Rechte vorbehalten.</p>
+    </footer>
+
+    <script>
+        let warenkorb = [];
+
+        function inWarenkorb(produkt) {
+            warenkorb.push(produkt);
+            alert(produkt + " wurde zum Warenkorb hinzugefügt!");
+        }
+    </script>
+</body>
+</html>
